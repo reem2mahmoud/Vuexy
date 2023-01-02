@@ -107,6 +107,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
     <style>
+         
         .report_replies .replies_body .user_comment{border-radius: 5px;border : 1px solid red ;}
         .report_replies .replies_body  .comment_collection{
             background-color : #F0F2F5 ;
@@ -114,8 +115,10 @@ License: You must have a valid license purchased only from themeforest(the above
             border-radius: 0 0 5px 5px 
         }
         .report_replies .replies_body  .comment_collection span{font-size : 1.1vw ; cursor : default}
-        .report_replies .replies_body .comment_collection div:nth-of-type(2) ul{height: 100%;}
-        .report_replies .replies_body .comment_collection div:nth-of-type(2) ul li{height: 60%; padding : auto  ;}
+        .report_replies .replies_body .comment_collection div:nth-of-type(2) ul li{
+          padding : auto  ;
+          
+        }
         .report_replies  ul {list-style : none}
         .report_replies .replies_body .user_reply{border : 1px solid #B8B3F7 ;}
         .report_replies .reply_input{display: none ;}
@@ -133,6 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
             .report_replies .replies_body  .comment_collection span{
               font-size : 1.1vw
             }
+            
           }
         @media screen and (max-width: 991px)  and (min-width : 768px){
             .report_replies .replies_body .comment_collection div:nth-of-type(2) ul li{
@@ -140,12 +144,14 @@ License: You must have a valid license purchased only from themeforest(the above
               padding : auto ;  
             }
             .report_replies .replies_body  .comment_collection span{
-              font-size : 1.2vw
+              font-size : 1.2vw ;
+              font-weight: bold;
             }
           }
         @media screen and (max-width: 767px)  and (min-width: 576px){
             .report_replies .replies_body  .comment_collection span{
-              font-size : 1.5vw
+              font-size : 1.5vw ;
+              font-weight: bold;
             }
             .report_replies .reply_input .submit_btn{
               font-size : 1.7vw ;
@@ -154,7 +160,8 @@ License: You must have a valid license purchased only from themeforest(the above
           }
         @media screen and (max-width: 575px)  and (min-width : 494px){
             .report_replies .replies_body  .comment_collection span{
-              font-size : 1.7vw
+              font-size : 1.7vw ;
+              font-weight: bold;
             }
             .report_replies .reply_input .submit_btn{
               font-size : 2vw ;
@@ -163,14 +170,17 @@ License: You must have a valid license purchased only from themeforest(the above
           }
         @media screen and (max-width: 493px){
             .report_replies .replies_body  .comment_collection span{
-              font-size : 1.8vw
+              font-size : 2.5vw ;
+              font-weight: bold;
             }
             .report_replies .reply_input .submit_btn{
-              font-size : 2.2vw ;
+              font-size : 2.5vw ;
+              font-weight: bold;
             }
-            .badge{
+            .replies_num{
               display:none
             }
+
           } 
 
     </style>
@@ -1118,7 +1128,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <a class="d-flex align-items-center" href="bww-reports.html"
                   ><i data-feather="circle"></i
                   ><span class="menu-item text-truncate" data-i18n="List"
-                    >Show Reports</span
+                    >Show Report</span
                   ></a
                 >
               </li>
@@ -1126,7 +1136,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <a class="d-flex align-items-center" href="bww-tickets.html"
                   ><i data-feather="circle"></i
                   ><span class="menu-item text-truncate" data-i18n="Preview"
-                    >Show Tickets</span
+                    >Show Ticket</span
                   ></a
                 >
               </li>
@@ -1135,6 +1145,14 @@ License: You must have a valid license purchased only from themeforest(the above
                   ><i data-feather="circle"></i
                   ><span class="menu-item text-truncate" data-i18n="Edit"
                     >Buy gift cards</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a class="d-flex align-items-center" href="bww-tickets.html"
+                  ><i data-feather="circle"></i
+                  ><span class="menu-item text-truncate" data-i18n="Preview"
+                    >Show gift cards</span
                   ></a
                 >
               </li>
@@ -2755,23 +2773,29 @@ License: You must have a valid license purchased only from themeforest(the above
               </div>
               <div class="content-body">
                 <div class="card">
-                  <div class="card-header">
-                    <h4 class="modal-title me-2" id="reportDetailsLabel">
-                      Product size problem
+                  <div class="card-header row">
+                    <h4 class="modal-title col-12 col-sm-8 float-start" id="report_title">
+                       Product size problem
+                       <span class="badge bg-warning rounded-pill mx-1 fs-6">pending</span>
                     </h4>
-                    <button
-                      type="button"
-                      class="btn btn-warning disabled"
-                      class="modal-title"
-                      id="reportDetailsLabel"
-                    >
-                      Pending
-                    </button>
-                    <!-- <button type="button" class="btn btn-success disabled" class="modal-title" id="reportDetailsLabel">Closed</button> -->
+                    <div class="mb-gutter col-12 col-sm-4 float-start">
+                      <ul class="list-group list-group-1 list-group-sm-2 list-group-horizontal rounded float-end">
+                        <li class="list-group-item my-auto py-auto seen_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                        </svg></li>
+                        <li class="list-group-item  my-auto py-auto reply_icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+                          <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                        </svg></li>
+                      </ul>
+                </div>
+                    
                   </div>
                   <div class="card-body">
                     <div class="report_description">
-                      <span class="float-start fs-5">
+                      <span class="float-start fs-5 mb-2">
                         I ordered the jacket in a medium size, but received it
                         in a large size , and different color</span
                       >
@@ -2796,26 +2820,12 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="row report_replies">
                       <div class="report_replies">
                         <div class="replies_header row">
-                          <div class="col-5">
+                          <div>
                             <h4 class="d-inline me-3 mb-4">
                               Replies
+                              <span class="badge bg-primary rounded-pill replies_num">2</span>
                              </h4>
-                             <span class="badge bg-primary rounded-pill">2</span>
                           </div>
-                          <div class="col-6">
-                                <ul class="list-group list-group-horizontal rounded float-end">
-                                  <li class="list-group-item my-auto py-auto seen_icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                  </svg></li>
-                                  <li class="list-group-item my-auto py-auto reply_icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
-                                    <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
-                                  </svg></li>
-                                </ul>
-                          </div>
-                         
                         </div>
                         <section class="mx-1">
                             <!-- first comment -->
@@ -2827,20 +2837,20 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                       
                                         <div class="row d-flex justify-content-center mx-auto comment_collection">
-                                           <div class="col-10 col-sm-9 col-md-7 m-auto row float-start">
-                                            <span class="col-5 col-sm-4  my-auto me-1">admin123456</span>
-                                            <span class="col-5 col-sm-4  my-auto me-1"  
+                                           <div class="col-10 col-sm-10 col-md-7 m-auto row float-start">
+                                            <span class="col-5 col-sm-4  my-auto p-0">admin123456</span>
+                                            <span class="col-5 col-sm-4  my-auto p-0"  
                                             data-toggle="tooltip" data-placement="bottom" title="2023-1-1 15:4"
                                             >22 min ago</span>  
                                            </div>
                                            <div class="d-none d-md-block col-md-4">
                                                  <ul class="list-group list-group-horizontal me-md-2 my-auto float-end">
                                                     
-                                                    <li class="ms-1 my-auto py-auto edit_icon"> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="blue" class="bi bi-pencil-square d-block" viewBox="0 0 16 16">
+                                                    <li class="ms-1 my-auto py-1 edit_icon"> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="blue" class="bi bi-pencil-square d-block" viewBox="0 0 16 16">
                                                         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                                         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                                       </svg></li>
-                                                    <li class="ms-1  my-auto pb-2 delete_icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                                    <li class="ms-1  my-auto py-1 delete_icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
                                                         <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
                                                       </svg></li>
                                                 
@@ -2873,19 +2883,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                           
                                             <div class="row d-flex justify-content-center mx-auto comment_collection">
                                               <div class="col-10 col-sm-9 col-md-7 m-auto row float-start">
-                                                <span class="col-5 col-sm-4  my-auto me-1">admin123456</span>
-                                                <span class="col-5 col-sm-4  my-auto me-1"  
+                                                <span class="col-5 col-sm-4  my-auto p-0">buyer123456</span>
+                                                <span class="col-5 col-sm-4  my-auto p-0"  
                                                 data-toggle="tooltip" data-placement="bottom" title="2023-1-1 15:4"
                                                 >22 min ago</span>  
                                                </div>
                                                <div class="d-none d-md-block col-md-4">
                                                      <ul class="list-group list-group-horizontal me-md-2 my-auto float-end">
-                                                                                                
-                                                    <li class="ms-1 my-auto py-auto edit_icon"> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="blue" class="bi bi-pencil-square d-block" viewBox="0 0 16 16">
+                                          
+                                                     <li class="ms-1 my-auto py-1 edit_icon"> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="blue" class="bi bi-pencil-square d-block" viewBox="0 0 16 16">
                                                       <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                                       <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                                     </svg></li>
-                                                  <li class="ms-1  my-auto pb-2 delete_icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                                  <li class="ms-1  my-auto py-1 delete_icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
                                                       <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
                                                     </svg></li>
                                                     
@@ -2909,11 +2919,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </li>
                                 </ul>
                                 <!-- input for reply -->
-                                <div class="row col-10 ps-1 reply_input">
+                                <div class="row col-12  col-sm-10 ps-1 reply_input">
                                    <div class="col-9 col-sm-8">
                                         <input type="text" class="form-control" placeholder="reply ..." aria-label="Username" aria-describedby="addon-wrapping">
                                    </div>
-                                   <button type="button" class="btn submit_btn btn-outline-primary col-2 p-0">Submit</button>
+                                   <button type="button" class="btn submit_btn btn-outline-primary col-3 col-sm-2 p-0">Submit</button>
                                </div>
                             </div>
                         </section>
@@ -3067,7 +3077,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <li
                 class="color-box bg-secondary"
                 data-navbar-color="bg-secondary"
-              ></li>
+              ></li>  
               <li
                 class="color-box bg-success"
                 data-navbar-color="bg-success"
