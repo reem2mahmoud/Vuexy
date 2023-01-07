@@ -101,87 +101,94 @@ License: You must have a valid license purchased only from themeforest(the above
       type="text/css"
       href="app-assets/css/pages/page-profile.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
     <style>
-         
-        .report_replies .replies_body .user_comment{border-radius: 5px;border : 1px solid red ;}
-        .report_replies .replies_body  .comment_collection{
-            background-color : #F0F2F5 ;
-            border : 1px solid #FFFFFF ;
-            border-radius: 0 0 5px 5px 
-        }
-        .report_replies .replies_body  .comment_collection span{font-size : 1.1vw ; cursor : default}
-        .report_replies .replies_body .comment_collection div:nth-of-type(2) ul li{
-          padding : auto  ;
-          
-        }
-        .report_replies  ul {list-style : none}
-        .report_replies .replies_body .user_reply{border : 1px solid #B8B3F7 ;}
-        .report_replies .reply_input{display: none ;}
-        .report_replies .reply_input .submit_btn{ height: 38px ;font-size : 1.2vw}
-        @media screen and (min-width: 1200px) {
-            .report_replies .replies_body  .comment_collection span{
-              font-size : 1vw ;
-            }
-          }
-        @media screen and (max-width: 1200px) and (min-width: 992px){
-            .report_replies .replies_body .comment_collection div:nth-of-type(2) ul li{
-              height: 60%;
-              padding : auto  
-            }
-            .report_replies .replies_body  .comment_collection span{
-              font-size : 1.1vw
-            }
-            
-          }
-        @media screen and (max-width: 991px)  and (min-width : 768px){
-            .report_replies .replies_body .comment_collection div:nth-of-type(2) ul li{
-              height: 60%;
-              padding : auto ;  
-            }
-            .report_replies .replies_body  .comment_collection span{
-              font-size : 1.2vw ;
-              font-weight: bold;
-            }
-          }
-        @media screen and (max-width: 767px)  and (min-width: 576px){
-            .report_replies .replies_body  .comment_collection span{
-              font-size : 1.5vw ;
-              font-weight: bold;
-            }
-            .report_replies .reply_input .submit_btn{
-              font-size : 1.7vw ;
-              padding:5px ;
-          }
-          }
-        @media screen and (max-width: 575px)  and (min-width : 494px){
-            .report_replies .replies_body  .comment_collection span{
-              font-size : 1.7vw ;
-              font-weight: bold;
-            }
-            .report_replies .reply_input .submit_btn{
-              font-size : 2vw ;
-              padding:5px ;
-            }
-          }
-        @media screen and (max-width: 493px){
-            .report_replies .replies_body  .comment_collection span{
-              font-size : 2.5vw ;
-              font-weight: bold;
-            }
-            .report_replies .reply_input .submit_btn{
-              font-size : 2.5vw ;
-              font-weight: bold;
-            }
-            .replies_num{
-              display:none
-            }
+     *{
+        padding : 0 ;
+        margin : 0 ;
+      }
+      .content-body {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10px;
+        transition: all 0.3s ease-out;
+    }
+      .product-img , .product-details {
+        height : 500px ;
+        border-radius: 0;
+      }
 
-          } 
+      .product-discount-container {
+        position: absolute;
+        margin-top: -20px;
+        margin-left: -20px;
+        transition: all 0.3s ease-out;
+      }
+
+      .product-discount {
+        margin-left: 20px;
+        margin-top: 30px;
+        width: 60px;
+        height: 40px;
+        background: #fff;
+        overflow: hidden;
+        color: #000;
+        font-weight: 500;
+        font-size: 1.25em;
+        letter-spacing: -0.5px;
+      }
+      .product-discount p{
+        margin-top: 10px
+      }
+      .product-details{
+        padding :50px
+      }
+     .product-details #product-name{
+        font-weight: bold
+      }
+      .product-details #product-price{
+        color : rgb(182, 40, 40) ;
+        margin-top : 30px
+      }
+      .product-details #product-price span:nth-of-type(1){
+        font-size: 2vw;
+      }
+      .product-details #product-price span:nth-of-type(2){
+        font-size: 4vw;
+      }
+
+      @media screen and (max-width: 576px){
+           .product-img , .product-details{
+              margin-bottom : 0 ; 
+              margin : 0 auto  
+           }
+           .product-details #product-price span:nth-of-type(1){
+              font-size: 3vw;
+           }
+           .product-details #product-price span:nth-of-type(2){
+               font-size: 5vw;
+           }
+      }
+      @media screen and (max-width: 400px){
+           .product-img {
+              height : 300px 
+           } 
+           .product-details{
+               height : 600px ;
+           }
+           .product-details #product-price span:nth-of-type(1){
+              font-size: 5vw;
+           }
+           .product-details #product-price span:nth-of-type(2){
+              font-size: 6vw;
+           }
+      }
+
 
     </style>
   </head>
@@ -1139,24 +1146,24 @@ License: You must have a valid license purchased only from themeforest(the above
                     >Show Ticket</span
                   ></a
                 >
-              </li>
-    
-              <li>
-                <a class="d-flex align-items-center" href="bww-gift-cards.html"
-                  ><i data-feather="circle"></i
-                  ><span class="menu-item text-truncate" data-i18n="Preview"
-                    >Show gift cards</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a class="d-flex align-items-center" href="bww-product.html"
-                  ><i data-feather="circle"></i
-                  ><span class="menu-item text-truncate" data-i18n="Preview"
-                    >Show Product</span
-                  ></a
-                >
-              </li>
+                  </li>
+            
+                  <li>
+                    <a class="d-flex align-items-center" href="bww-gift-cards.html"
+                      ><i data-feather="circle"></i
+                      ><span class="menu-item text-truncate" data-i18n="Preview"
+                        >Show gift cards</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a class="d-flex align-items-center" href="bww-product.html"
+                      ><i data-feather="circle"></i
+                      ><span class="menu-item text-truncate" data-i18n="Preview"
+                        >Show Product</span
+                      ></a
+                    >
+                  </li>
               <li>
                 <a class="d-flex align-items-center" href="app-invoice-add.html"
                   ><i data-feather="circle"></i
@@ -2749,22 +2756,22 @@ License: You must have a valid license purchased only from themeforest(the above
                   <div class="row breadcrumbs-top">
                     <div class="col-12">
                       <h2 class="content-header-title float-start mb-0">
-                        reports
+                        Products
                       </h2>
                       <div class="breadcrumb-wrapper">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item">
                             <a href="{{ route('dashboard.home') }}">
-                             HOme</a
+                             Home</a
                             >
                           </li>
                           <li class="breadcrumb-item">
                             <a href="{{ route('dashboard.report.index') }}">
-                             reports</a
+                             Products</a
                             >
                           </li>
                           <li class="breadcrumb-item">
-                            <a href="">reports</a>
+                            <a href="">Apple TV</a>
                           </li>
                         </ol>
                       </div>
@@ -2773,165 +2780,47 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
               </div>
               <div class="content-body">
-                <div class="card">
-                  <div class="card-header row">
-                    <h4 class="modal-title col-12 col-sm-8 float-start" id="report_title">
-                       Product size problem
-                       <span class="badge bg-warning rounded-pill mx-1 fs-6">pending</span>
-                    </h4>
-                    <div class="mb-gutter col-12 col-sm-4 float-start">
-                      <ul class="list-group list-group-1 list-group-sm-2 list-group-horizontal rounded float-end">
-                        <li class="list-group-item my-auto py-auto seen_icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                        </svg></li>
-                        <li class="list-group-item  my-auto py-auto reply_icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
-                          <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
-                        </svg></li>
-                      </ul>
-                </div>
-                    
-                  </div>
-                  <div class="card-body">
-                    <div class="report_description">
-                      <span class="float-start fs-5 mb-2">
-                        I ordered the jacket in a medium size, but received it
-                        in a large size , and different color</span
-                      >
-                      <span class="float-end"><strong>22 DEC </strong></span>
-                    </div>
-                    <br />
-                    <div class="row report_images my-3">
-                      <img
-                        class="col-5 col-sm-4 col-md-3 col-xl-2 pt-1"
-                        src="https://images.pexels.com/photos/10769588/pexels-photo-10769588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                      />
-                      <img
-                        class="col-5 col-sm-4 col-md-3 col-xl-2 pt-1"
-                        src="https://images.pexels.com/photos/10769588/pexels-photo-10769588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                      />
-                      <img
-                        class="col-5 col-sm-4 col-md-3 col-xl-2 pt-1"
-                        src="https://images.pexels.com/photos/10769588/pexels-photo-10769588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                      />
-                    </div>
-                    <hr />
-                    <div class="row report_replies">
-                      <div class="report_replies">
-                        <div class="replies_header row">
-                          <div>
-                            <h4 class="d-inline me-3 mb-4">
-                              Replies
-                              <span class="badge bg-primary rounded-pill replies_num">2</span>
-                             </h4>
+                    <div class="row d-flex mb-3">
+                         <div class="card col-11 col-sm-5 col-md-5 col-lg-6 bg-light product-img text-center m-md-0">
+                          <div class="product-discount-container">
+                              <div class="product-discount"> <p>10%</p></div>
                           </div>
-                        </div>
-                        <section class="mx-1">
-                            <!-- first comment -->
+                            <img class="my-auto" src="app-assets/images/pages/eCommerce/3.png">
+                           
+                          </div>
+                        <div class="card col-11 col-sm-7 col-md-6 col-lg-4 product-details  py-2  m-md-0">
+                            <h1 id="product-name">Apple TV</h1>
+                            <p id="product-coupon">Coupon : xyzedw</p>
+                            <p id="product-price">
+                               <span><s>793$</s></span>
+                               <span>713.7</span>
+                            </p>
                             <div>
-                                <div class="replies_body row my-2">
-                                    <div class="col-12 col-sm-11  user_comment pt-1 px-0">
-                                        <div class="comment_text p-1"> 
-                                            <p>I will help you as soon as possible</p>
-                                        </div>
-                                      
-                                        <div class="row d-flex justify-content-center mx-auto comment_collection">
-                                           <div class="col-10 col-sm-10 col-md-7 m-auto row float-start">
-                                            <span class="col-5 col-sm-4  my-auto p-0">admin123456</span>
-                                            <span class="col-5 col-sm-4  my-auto p-0"  
-                                            data-toggle="tooltip" data-placement="bottom" title="2023-1-1 15:4"
-                                            >22 min ago</span>  
-                                           </div>
-                                           <div class="d-none d-md-block col-md-4">
-                                                 <ul class="list-group list-group-horizontal me-md-2 my-auto float-end">
-                                                    
-                                                    <li class="ms-1 my-auto py-1 edit_icon"> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="blue" class="bi bi-pencil-square d-block" viewBox="0 0 16 16">
-                                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                                                      </svg></li>
-                                                    <li class="ms-1  my-auto py-1 delete_icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                                        <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                                                      </svg></li>
-                                                
-                                                 </ul>
-                                           </div>
-
-                                           <div class="d-block  col-1 d-md-none my-auto dropdown">
-                                           
-                                            <svg class="bi bi-three-dots-vertical float-end  dropdown-toggle" 
-                                             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-                                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor  viewBox="0 0 16 16">
-                                             <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                                           </svg>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                              <li class="edit_item"><a class="dropdown-item" href="#">Edit</a></li>
-                                              <li class="delete_item"><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- first comment replies -->
-                                <ul>
-                                    <li>
-                                      <div class="replies_body row my-2">
-                                        <div class="col-12 col-sm-11  user_comment pt-1 px-0 user_reply">
-                                            <div class="comment_text p-1"> 
-                                                <p>Thanks</p>
-                                            </div>
-                                          
-                                            <div class="row d-flex justify-content-center mx-auto comment_collection">
-                                              <div class="col-10 col-sm-9 col-md-7 m-auto row float-start">
-                                                <span class="col-5 col-sm-4  my-auto p-0">buyer123456</span>
-                                                <span class="col-5 col-sm-4  my-auto p-0"  
-                                                data-toggle="tooltip" data-placement="bottom" title="2023-1-1 15:4"
-                                                >22 min ago</span>  
-                                               </div>
-                                               <div class="d-none d-md-block col-md-4">
-                                                     <ul class="list-group list-group-horizontal me-md-2 my-auto float-end">
-                                          
-                                                     <li class="ms-1 my-auto py-1 edit_icon"> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="blue" class="bi bi-pencil-square d-block" viewBox="0 0 16 16">
-                                                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                      <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                                                    </svg></li>
-                                                  <li class="ms-1  my-auto py-1 delete_icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                                      <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                                                    </svg></li>
-                                                    
-                                                     </ul>
-                                               </div>
-                                               <div class="d-block col-1 d-md-none my-auto dropdown">
-                                             
-                                            <svg class="bi bi-three-dots-vertical float-end  dropdown-toggle" 
-                                             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-                                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor  viewBox="0 0 16 16">
-                                             <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                                           </svg>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                              <li class="edit_item"><a class="dropdown-item" href="#">Edit</a></li>
-                                              <li class="delete_item"><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                          </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </li>
-                                </ul>
-                                <!-- input for reply -->
-                                <div class="row col-12  col-sm-10 ps-1 reply_input">
-                                   <div class="col-9 col-sm-8">
-                                        <input type="text" class="form-control" placeholder="reply ..." aria-label="Username" aria-describedby="addon-wrapping">
-                                   </div>
-                                   <button type="button" class="btn submit_btn btn-outline-primary col-3 col-sm-2 p-0">Submit</button>
-                               </div>
+                               <div class="my-2 fw-bold product-seller"> 
+                                 
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                  </svg>
+                                  <span class="mx-1"> Mohamed</span> 
+                              </div>
+                              <div class="my-2 fw-bold product-section">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                                </svg>
+                                <span class="mx-1"> Televions</span> 
+                              </div>
                             </div>
-                        </section>
-                      </div>
+                            <hr>
+                            <div>
+                               <p class="text-center">The new Apple TV 4K brings Apple TV+, Apple Music, Apple Fitness+, 
+                                and Apple Arcade together with all your favorite streaming apps — in our best‑ever 
+                                picture and audio quality
+                              </p>
+                            </div>
+                            <button class="btn btn-primary mt-auto col-8 mx-auto">Approve</button>
+                        </div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -3240,22 +3129,7 @@ License: You must have a valid license purchased only from themeforest(the above
         }
       });
 
-      $(document).ready(function () {
-        $(".reply_icon , .reply_item").click(function() {
-        
-           
-            if(".replt_icon"){
-              var index = $(".reply_icon").index(this);
-            }
-            else if(".reply_item"){
-              var index = $(".reply_item").index(this);
-            }
-            $('.reply_input').eq(index).css('display') == 'none' ?
-            $('.reply_input').eq(index).css('display','flex') :
-            $('.reply_input').eq(index).css('display','none')
-             
-        });
-    });
+  
     </script>
    
   </body>
