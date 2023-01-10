@@ -129,7 +129,57 @@ License: You must have a valid license purchased only from themeforest(the above
         margin-left : 70px  !important ;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
     }
-   
+    .gift_cards .card .card-body .complete_order .share_item .share_icon{
+        margin-left : -8px ;
+    }
+    .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 1.2vw ;
+    }
+    @media screen and (max-width: 1400px) and (min-width : 1200px){
+      .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 1.2vw ;
+       }
+    }
+    @media screen and (max-width: 1199px) and (min-width : 992px){
+      .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 1.4vw ;
+       }
+    }
+    @media screen and (max-width: 991px) and (min-width : 768px){
+      .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 1.5vw ;
+       }
+    }
+    @media screen and (max-width: 767px) and (min-width : 576px){
+      .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 1.8vw ;
+       }
+    }
+    @media screen and (max-width: 575px) and (min-width : 466px){
+      .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 2.6vw ;
+       }
+    }
+    @media screen and (max-width: 465px) and (min-width: 300px){
+      .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 3.6vw ;
+       }
+       .gift_cards .card{
+        width :100% ;
+        margin: 0 auto ;
+      }
+    }
+    @media screen and (max-width: 299px){
+      .gift_cards .card{
+        width :100% ;
+      }
+      .gift_cards .card .card-body .complete_order .order_item a{
+         font-size : 4.5vw ;
+       }
+      .gift_cards .card .card-body .complete_order .order_item .order_icon{
+          display : none ;
+       }
+    }
  
 
     </style>
@@ -2725,7 +2775,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   <a href="#" class="btn btn-primary">Buy gift card</a>
                 </div>
                  <div class="row gift_cards d-flex justify-content-center mx-auto text-center p-0">
-                    <div class="card col-10 col-sm-5 col-md-5 col-lg-3 col-xxl-4 me-1 my-1">
+                    <div class="card col-9 col-sm-5 col-md-4 col-lg-4 col-xl-3 col-xxl-3 me-sm-1 my-1">
                         <img src="https://images.pexels.com/photos/10769588/pexels-photo-10769588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top"alt="Card image cap">
                         <div class="card-body d-flex flex-column  position-relative">
                            <h3 class="gift_title mt-1"><strong>Card gift title</strong></h3> 
@@ -2741,30 +2791,31 @@ License: You must have a valid license purchased only from themeforest(the above
                             <span class="badge bg-warning">code_42</span>
                             <span class="badge bg-warning">code_532</span>
                           </div>
-                          <div class="mt-auto row col-12 mx-auto p-0">
+                          <div class="mt-auto row col-12 mx-auto p-0 complete_order">
                             <ul class="list-group list-group-horizontal px-auto rounded"> 
-                                <li class="list-group-item my-auto col-11"> 
+                                <li class="list-group-item my-auto col-11 order_item"> 
                                   <a type="button" class=" px-0 mx-auto">
                                     Complete Order 
-                                    <svg class="d-none d-sm-inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <svg class="order_icon"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                                       <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                     </svg>
                                   </a>
                                 </li>
-                                <li class="list-group-item col-2 px-auto">
-                                    <a data-toggle="tooltip" data-placement="bottom" title="share via whatsapp" >
-                                    <svg class="me-4" xmlns="http://www.w3.org/2000/svg"
-                                    width="19" height="19" fill="blue" class="bi bi-share" viewBox="0 0 16 16">
-                                      <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-                                    </svg>
-                                  </a>  
-                                </li>
+                                <li class="list-group-item col-2 px-auto share_item">
+                                  <a data-toggle="tooltip" data-placement="bottom" title="share via whatsapp" >
+                                  <svg class="share_icon" xmlns="http://www.w3.org/2000/svg"
+                                  width="19" height="19" fill="blue" class="bi bi-share" viewBox="0 0 16 16">
+                                    <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                                  </svg>
+                                </a>  
+                              </li>
                             </ul>  
                           </div>
                         </div>
                     </div>
-                    <div class="card col-10 col-sm-5 col-md-5 col-lg-3 col-xxl-4 me-1 my-1">
-                      <img src="https://images.pexels.com/photos/10769588/pexels-photo-10769588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top"alt="Card image cap">
+                    <div class="card col-9 col-sm-5 col-md-4 col-lg-4 col-xl-3 col-xxl-3 me-sm-1 my-1">
+                      <img src="https://images.pexels.com/photos/10769588/pexels-photo-10769588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                          class="card-img-top"alt="Card image cap">
                       <div class="card-body d-flex flex-column  position-relative">
                          <h3 class="gift_title mt-1"><strong>Card gift title</strong></h3> 
                          <p class="gift_pin_code">Pin Code : 1234898</p>
@@ -2777,19 +2828,19 @@ License: You must have a valid license purchased only from themeforest(the above
                           <span class="badge bg-warning">code_312345</span>
                           <span class="badge bg-warning">code_532</span>
                         </div>
-                        <div class="mt-auto row col-12 mx-auto p-0">
+                        <div class="mt-auto row col-12 mx-auto p-0 complete_order">
                           <ul class="list-group list-group-horizontal px-auto rounded"> 
-                              <li class="list-group-item my-auto col-11"> 
+                              <li class="list-group-item my-auto col-11 order_item"> 
                                 <a type="button" class=" px-0 mx-auto">
                                   Complete Order 
-                                  <svg class="d-none d-sm-inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                  <svg class="order_icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                   </svg>
                                 </a>
                               </li>
-                              <li class="list-group-item col-2 px-auto">
+                              <li class="list-group-item col-2 px-auto share_item">
                                   <a data-toggle="tooltip" data-placement="bottom" title="share via whatsapp" >
-                                  <svg class="me-4" xmlns="http://www.w3.org/2000/svg"
+                                  <svg class="share_icon" xmlns="http://www.w3.org/2000/svg"
                                   width="19" height="19" fill="blue" class="bi bi-share" viewBox="0 0 16 16">
                                     <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
                                   </svg>
