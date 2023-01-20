@@ -112,19 +112,15 @@ License: You must have a valid license purchased only from themeforest(the above
         padding : 0 ;
         margin : 0 ;
       }
-      .warranty-card{
-        min-height: 250px;
-     
-    }
-      .warranty-card .image-container {
-      
-        height:250px;
-    
+      .warranty-card{height: 250px;}
+      .warranty-card .image-container{
+         height : 100% ; 
+         
       }
       .warranty-card .image-container img{
          width : 90% ; 
          height: 100px ;
-         margin : 65px 5px;
+         margin : 75px 5px;
       }
       .congratulation-medal{position:absolute;top:0;right:37px}
       .request-warranty{
@@ -151,24 +147,22 @@ License: You must have a valid license purchased only from themeforest(the above
           }
           .details-container .price-name #product-name ,
           .details-container .price-name #price{
-            width : 50% ;
+            width : 50%
           }
           .details-container .price-name #price{
             text-align: right;
           } 
        }
        @media screen and (max-width:576px) {
-        .warranty-card{
-          margin: auto;
-        }
         .image-container{
-            width:100% ;
-            height: 150px;  
+            height: 220px; 
+            background-color: #dddd;
         }
-        .warranty-card .image-container img{
-            width : 50% ; 
+        .image-container img{
+            width : 60% ; 
             height: 120px ;
-            margin: 50px
+            margin :40px
+            
         }
         #price{
             position: absolute;
@@ -177,16 +171,6 @@ License: You must have a valid license purchased only from themeforest(the above
             font-size: 4.5vw;
             font-weight: 700;
          }
-         .details-container .price-name #product-name{
-              width : 100% ;
-              text-align: left;
-               margin-right:20px
-         }
-         .request-warranty{
-          position : relative ;
-          right:14px;
-          text-align: center;
-      }
        }
        @media screen and (max-width:452px) {
         .date{
@@ -197,14 +181,12 @@ License: You must have a valid license purchased only from themeforest(the above
          .date  .delivery-date   {
           width: 100%;
          }
-                
          .request-warranty-btn{
-           width : 90% ;
-          }        
-        }
-     
+          width:100%
+         }
+        
+       }
     </style>
-    
   </head>
   <!-- END: Head-->
   <!-- BEGIN: Body-->
@@ -2792,99 +2774,16 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
               </div>
               <div class="content-body">
-                  <div class="card  warranty-card  col-11 col-sm-12 col-md-12 col-lg-10  col-xl-8">
-                      <div class="card-body row p-0">
-                          <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                             <div class="image-container bg-light">
-                                <img  src="app-assets/images/elements/macbook-pro.png" alt="product-img">
-                             </div>
-                          </div>
-                          <div class="col-12 col-sm-7 col-md-6 col-lg-6  details-container mx-1 my-2">
-                              <div>
-                                <div class="price-name"> 
-                                   <h2 id="price">200<sup>$</sup></h2>
-                                    <p  id="product-name"class="fs-4 fw-bolder">Support Sumsung</p>
-                                </div>
-                                  <p  id="warranty-type"><span class="fs-5 fw-bold">Warranty Type : </span><span> company </span> </p>
-                              </div>
-                             
-                              <div class="date d-flex flex-row">
-                               
-                                 <div class="expire-date col-6 d-flex flex-row">
-                                    <img src="app-assets/images/illustration/expired.png" width="40px" height="40px">
-                                   <div class="ms-1">
-                                      <span class="fw-bolder">Expire Date</span>
-                                      <p>2023-12-06</p>
-                                   </div>
-                                 </div>
-                                 <div class="delivery-date col-6 d-flex flex-row">
-                                  <img src="app-assets/images/illustration/delivery.png" width="40px" height="40px">
-                                 <div class="ms-1">
-                                    <span class="fw-bolder">Delivery Date</span>
-                                    <p>2023-12-06</p>
-                                 </div>
-                               </div>
-                              </div>
-                              <div class="request-warranty d-block d-md-none">
-                                <a href="#" class="btn btn-primary mt-1 request-warranty-btn">
-                                  <i class="fas fa-share-square fs-4"></i>
-                                  <span>Request Warranty</span>
-                                </a>
-                              </div>
-                              
-                          </div>
-                          <div class="col-12 col-sm-1 col-md-2 col-lg-2  icon-container  d-none d-md-block">
-                                <img src="app-assets/images/illustration/badge.svg"
-                              class="congratulation-medal " alt="Medal Pic" />
-                              
-                              <div class="request-warranty">
-                                <a href="#" class="btn btn-primary mt-1 request-warranty-btn">
-                                  <i class="fas fa-share-square fs-4"></i>
-                                  <span>Request Warranty</span>
-                                </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- <div class="card  d-block d-sm-none col-11 mx-auto">
-                    <div class="image-container">
-                      <img  src="app-assets/images/elements/macbook-pro.png" alt="product-img">
-                      <span id="price">200<sup>$</sup></span>
+                 <div class="card">
+                    <div class="card-body row">
                     </div>
-                   
-                    <div class="card-body">
-                      <h5 class="card-title"> Support Sumsung</h5>
-                      <p  id="warranty-type"><span class="fs-5 fw-bold">Warranty Type : </span><span> company </span> </p>
-                      <div class="date d-flex flex-row">
-                               
-                        <div class="expire-date col-6 d-flex flex-row">
-                           <img src="app-assets/images/illustration/expired.png" width="40px" height="40px">
-                          <div class="ms-1">
-                             <span class="fw-bolder">Expire Date</span>
-                             <p>2023-12-06</p>
-                          </div>
-                        </div>
-                        <div class="delivery-date col-6 d-flex flex-row">
-                         <img src="app-assets/images/illustration/delivery.png" width="40px" height="40px">
-                        <div class="ms-1">
-                           <span class="fw-bolder">Delivery Date</span>
-                           <p>2023-12-06</p>
-                        </div>
-                      </div>
-                     </div>
-                      <a href="#" class="btn btn-primary mt-1 request-warranty-btn">
-                        <i class="fas fa-share-square fs-4"></i>
-                        <span>Request Warranty</span>
-                      </a>
-                    </div>
-                  </div> -->
+                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- END: Content-->
 
     <!-- BEGIN: Customizer-->
