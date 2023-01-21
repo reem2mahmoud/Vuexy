@@ -108,84 +108,71 @@ License: You must have a valid license purchased only from themeforest(the above
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- END: Custom CSS-->
     <style>
-     *{
+    *{
         padding : 0 ;
         margin : 0 ;
+    }
+    .product-warranty-card{
+        height: 220px ;
+        padding:0
+    }
+    .image-container{
+      height:250px ;
+      text-align:center ;
+      margin: auto 0
+    }
+    .image-container .product-name{
+      padding-top : 30px ;
+      font-weight: 800;
+      font-size : 1.6vw ;
+    }
+    .image-container .product-img{
+        width : 150px ;
+        height: 150px;
+        border-radius : 50% ;
+        display: block ;
+        margin : auto ;
+     }
+     .comment{
+      overflow-y: auto;
+      overflow-x: auto;
+      height:60px ;
+      width: 99%;
+      padding-right: 10px ;
+   
+     }
+     .comment p {
+        text-align: justify;
+        text-justify: inter-word;  
+     }
+     .card-footer{
+         border: none !important ;
+         text-align: right;
+     }
+     @media screen and (max-width:768px) {
+      .product-warranty-card{
+        height: 450px ;
       }
-      .warranty-card{height: 250px;}
-      .warranty-card .image-container{
-         height : 100% ; 
-         
+      .image-container .product-name{
+        font-size : 3vw ;
       }
-      .warranty-card .image-container img{
-         width : 90% ; 
-         height: 100px ;
-         margin : 75px 5px;
+     }
+     @media screen and (max-width:576px) {
+      .image-container .product-name{
+        font-size : 4vw ;
       }
-      .congratulation-medal{position:absolute;top:0;right:37px}
-      .request-warranty{
-        position : absolute ;
-        bottom: 10px;
-        right:33px;
-      }
-      .request-warranty-btn{
-         height: 50px; 
-         padding : 11px;
-      }
-      @media screen and (max-width:768px) {
-        .request-warranty{
-            position : absolute ;
-            bottom: 10px;
-            right:150px
-          }
-         .details-container .price-name{
-            display: flex;
-            flex-direction: row-reverse;
-            align-content: space-evenly ;
-            width: 100%;
-            
-          }
-          .details-container .price-name #product-name ,
-          .details-container .price-name #price{
-            width : 50%
-          }
-          .details-container .price-name #price{
-            text-align: right;
-          } 
+     }
+     @media screen and (max-width:450px) {
+       .card-footer{
+        text-align: center 
        }
-       @media screen and (max-width:576px) {
-        .image-container{
-            height: 220px; 
-            background-color: #dddd;
-        }
-        .image-container img{
-            width : 60% ; 
-            height: 120px ;
-            margin :40px
-            
-        }
-        #price{
-            position: absolute;
-            top:20px ;
-            right:20px ;
-            font-size: 4.5vw;
-            font-weight: 700;
-         }
-       }
-       @media screen and (max-width:452px) {
-        .date{
-           display: flex;
-           flex-direction: column !important ;
-         }
-         .date .expire-date  ,
-         .date  .delivery-date   {
-          width: 100%;
-         }
-         .request-warranty-btn{
-          width:100%
-         }
-        
-       }
+     }
+     @media screen and (max-width:350px) {
+      .image-container .product-name{
+        font-size : 5vw ;
+      }
+     }
+ 
     </style>
   </head>
   <!-- END: Head-->
@@ -2774,8 +2761,44 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
               </div>
               <div class="content-body">
-                 <div class="card">
-                    <div class="card-body row">
+                 <div class="card col-12 col-md-12 col-lg-9">
+                    <div class="card-body row product-warranty-card">
+                      <div class=" col-12 col-md-3  text-center ">
+                         <div class="image-container bg-light">
+                          <p class="product-name">Samsung Tv</p>
+                           <img class="product-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+                         </div>
+                       
+                      </div>
+                      <div class="details-container col-11  col-md-8 ms-1 my-2 ">
+                          <p>
+                            <i class="fas fa-warehouse fs-5"></i>
+                            <span class="fw-bold">Warranty Type :</span> Company</p>
+                          <hr class="bg-light">
+                          <p>
+                            <i class="far fa-question-circle fs-3"></i>
+                            <span class="fw-bold">Reason:</span> Test</p>
+                          <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                              <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                            </svg>
+                            <span class="fw-bold">Warranty Problem :</span> Test</p>
+                            <hr class="bg-light">
+                          <div class="comment">
+                            <i class="far fa-comment fs-3 text-wrap"></i>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                             when an unknown printer took a galley of type and scrambled it to 
+                             make a type specimen book.
+                             It has survived not only five centuries,
+                          </div>
+                      </div>
+                    </div>
+                    <div class="card-footer bg-light mt-1">
+                       <button  class="btn btn-warning warranty-status">Pending</button>
+                       <!-- <button  class="btn btn-danger warranty-status">Rejected</button> -->
+                       <!-- <button  class="btn btn-primary warranty-status">Progress</button> -->
                     </div>
                  </div>
               </div>
